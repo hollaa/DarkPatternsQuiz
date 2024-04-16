@@ -1,27 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dark Patterns Explained</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <title>Deceptive Patterns Quiz</title>
+
 </head>
+
 <body>
     <img src="../images/Vector.svg" alt="" srcset="" style="position: absolute; bottom: 13px; right: 0px; z-index: -1;">
     <img src="../images/blob1.svg" alt="" srcset="" style="position: absolute; top: 13px; left: 0px; z-index: -1;">
 
-    <section class="landingPageContainer">
+    <section class="landingPageContainer" style="min-height: 100vh;">
         <h2>What are</h2>
-        <h1 style="color: #4B99E5; margin: 0">Dark Patterns</h1>
-        <p>As designers, we strive for intuitive experiences. But what if subtle manipulation lurks beneath the surface? Let's delve into dark patterns and explore ethical design solutions.
+        <h1 style="color: #4B99E5; margin: 0">Deceptive Patterns</h1>
+        <p>As designers, we strive for intuitive experiences. But what if subtle manipulation lurks beneath the surface?
+            Let's delve into dark patterns and explore ethical design solutions.
         </p>
-        <button class="primaryButton">Explore dark patterns</button>
+        <button class="primaryButton" id="exploreButton">Explore dark patterns</button>
     </section>
     <section class="darkPatternTypesContainer">
-        
+        <button class="accordion" style="border-radius: 5px 5px 0 0;">Nagging</button>
+        <div class="panel">
+            <p>In the context of user interactions, nagging is described as a minor redirection of expected
+                functionality that may persist over one or more interactions <a
+                    href="https://dl.acm.org/doi/pdf/10.1145/3173574.3174108">(Grey et al., 2018, p. 5)</a> . This form
+                of redirection is characterized by its recurrent nature, where users encounter unrelated tasks or
+                notifications that divert their attention.
+                <br>
+            <div style="display: flex; align-items: center; ">
+                <i class="fas fa-lightbulb lightbulb"></i>
+                <p>Examples of such nagging behaviors encompass intrusive pop-ups obscuring interfaces, distracting
+                    audio alerts, or actions that redirect user focus. </p>
+            </div>
+            </p>
+        </div>
+
+        <button class="accordion">Obstruction</button>
+        <div class="panel">
+            <p>
+                Imagine a website that hides settings, uses confusing labels, or makes it hard to leave. These are
+                "obstructions" <a href="https://dl.acm.org/doi/pdf/10.1145/3173574.3174108" target=”_blank”>(Grey et
+                    al., 2018, p. 5)</a> that frustrate users and get in the way of their goals. Obstruction also
+                includes <a href="https://90percentofeverything.com/about/index.html" target=”_blank”>Brignull’s </a>
+                "Roach Motel" concept which describes platforms that get users easy to enter a certain situation but
+                ensure difficulty in exit. Moreover, it includes alo the "Price Comparison Prevention" pattern which
+                makes it difficult for a user to compare prices of a product. <a
+                    href="https://dl.acm.org/doi/pdf/10.1145/3173574.3174108" target=”_blank”>(Grey et al., 2018, p.
+                    6)</a>. Additionally, the "Intermediate Currency" paradigm makes users to spend real-world money to
+                buy a virtual currency which they can later spend on the products of the software which may result in
+                users spending the money differently than they would in reality.
+            </p>
+        </div>
+
+        <button class="accordion">Sneaking</button>
+        <div class="panel">
+            <p>Sneaking refers to the deliberate withholding or delay of important information from users, often leading
+                them to take actions they might otherwise resist if fully informed. Common manifestations of sneaking
+                include undisclosed costs or unintended outcomes from specific user actions. <br> <a
+                    href="https://90percentofeverything.com/about/index.html" target=”_blank”>Brignull’s </a> taxonomy
+                of dark patterns clarifies several variants of sneaking tactics. The "Forced Continuity" pattern takes
+                advantage of users' ignorance of subscription timetables to silently prolong fees after services expire.
+                Similarly, the "Hidden Costs" pattern initially advertises prices that subsequently escalate due to
+                additional fees or conditions. Additionally, the "Sneak into Basket" strategy secretly adds unselected
+                items to online shopping carts, potentially leading to inadvertent purchases. Lastly, the "Bait and
+                Switch" technique deceives users by promising one outcome but delivering another, as demonstrated by
+                misleading button functions in user interfaces such as having an “X” button that does something other
+                than close a popup window.
+            </p>
+        </div>
+        <button class="accordion">Interface Interference</button>
+        <div class="panel">
+            <p>Interface Interference is about strategies in design that subtly favor certain actions over others, often
+                leading to confusion among users or making it difficult for them to discover crucial options. These
+                strategies employ a mix of visual and interactive deceptions, broadly classified into hidden
+                information, preselection, and aesthetic manipulation. Hidden information, a subcategory of Interface
+                Interference, is the act of obscuring vital choices or information, such as embedding a crucial opt-out
+                checkbox within dense legal text, making it hard for users to find or access them easily. This tactic
+                often involves presenting important user options in a manner that disguises them as irrelevant or
+                secondary, requiring users to exert extra effort to uncover them. Preselection automatically sets
+                options in favor of the service provider's preferences, subtly steering users toward making choices that
+                might not align with their own interests. This is commonly seen in forms where options like data sharing
+                or newsletter subscriptions are pre-checked, nudging users toward decisions they might not have
+                consciously chosen. Aesthetic manipulation leverages design to affect user decisions, using misleading
+                visuals or emotional triggers to influence actions. This includes making certain content appear
+                inaccessible without payment or employing countdown timers and language that apply pressure or evoke
+                emotional responses to push users toward specific actions. These tactics, through their various
+                implementations, aim to subtly direct user behavior by leveraging emotional responses or creating
+                misleading impressions, ultimately guiding users into making choices they might not have made if
+                presented transparently. Analyzing examples from diverse websites underscores the urgent need for
+                ethical design principles that respect user autonomy and promote transparency.
+            </p>
+        </div>
+        <button class="accordion" style="border-radius: 0 0 5px 5px;">Forced Action</button>
+        <div class="panel">
+            <p>Forced action pressures users to perform certain tasks to access functionalities, such as mandatory
+                updates or agreeing to data sale terms for unsubscribing from services. There are three subcategories in
+                Forced Action: Social Pyramid, Privacy Zuckering and Gamification. Social Pyramid schemes forces users
+                to recruit others for benefits, like in FarmVille, where game features depend on inviting friends.
+                Privacy Zuckering tricks users into oversharing personal information, often hidden in terms and
+                conditions. Gamification forces users into repetitive tasks for service benefits, as seen in Candy Crush
+                Saga, where progress can be slow without purchases, encouraging users to spend money for advancement.
+            </p>
+        </div>
+
 
     </section>
 
 
     <script src="bundle.js"></script>
+    <script>
+        const exploreButton = document.getElementById('exploreButton');
+        const otherSection = document.querySelector('.darkPatternTypesContainer');
+
+        exploreButton.addEventListener('click', () => {
+            otherSection.scrollIntoView({ behavior: "smooth" }); // Smooth scroll to it
+        });
+
+        const acc = document.getElementsByClassName("accordion");
+        let i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        } 
+    </script>
 </body>
+
 </html>
