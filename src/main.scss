@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+$green: #7CD676;
+$lightGreen: #A3E29F;
+$lightBlue: #81B7ED;
+$lightGrey: #D4D4D4;
+$blue: #4B99E5;
+$grey: #787878;
+$orange: #F29B41;
+
+
+body {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+.primaryButton{
+    background-color: $green;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    color: black;
+}
+
+.secondaryButton:hover{
+  background-color: $green;
+  color: black;
+    cursor: pointer;
+}
+
+.primaryButton:hover { 
+  background-color: $lightGreen;
+  cursor: pointer;
+}
+
+.secondaryButton{
+    border: 1px solid #7CD676;
+    border-radius: 5px;
+    color:#7CD676;
+    background-color: transparent;
+    padding: 12px 24px;
+    font-size: 16px;
+    margin: 12px;
+}
+
+
+
+//landing page
+
+.landingPageContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    row-gap: 16px;
+}
+
+.landingPageContainer h1{
+    font-size: 60px;
+}
+
+
+.questionsContainer, .leaderBoardContainer{
+    display: none;
+}
+
+//question
+.questionContainer{
+    display: none;
+    color: white;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 40px;
+    justify-content: space-between;
+}
+
+.questionContainer h2{
+    color: $grey
+}
+
+.questionContainer h2 span{
+    color: $blue;
+}
+
+.buttonsQuestion{
+    display: flex;
+    margin: 24px;
+}
+
+.callout {
+    max-width: 700px;
+    background-color: #DBEBFA;
+    color: black;
+    padding: 15px;
+    margin: 50px;
+    border-radius: 5px;
+    position: relative; 
+  }
+  
+  .callout h3 {
+    margin-top: 0;
+  }
+  
+  .callout i {
+    font-size: 2em;  
+    margin-right: 16px;
+    color: $orange;  
+  }
+
+
+.leaderBoardContainer{
+  justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 24px;
+}
+  
+
+.add {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Add spacing between elements */
+}
+
+.add label {
+  font-weight: bold;
+}
+
+.add input[type="text"] {
+  padding: 8px;
+  border: 1px solid $lightGrey;
+  border-radius: 5px;
+  width: 180px;
+}
+
+table {
+  border-collapse: collapse; /* Ensures borders don't overlap */
+  width: 100%; /* Stretch table to full width */
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid $lightGrey;
+  text-align: left; /* Align content to the left */
+}
+
+thead th {
+  background-color: $lightBlue;
+}

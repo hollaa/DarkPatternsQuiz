@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <title>Deceptive Patterns Quiz</title>
+    
+</head>
+
+<body>
+    <img src="../images/Vector.svg" alt="" srcset="" style="position: absolute; bottom: 13px; right: 0px; z-index: -1;">
+    <img src="../images/blob1.svg" alt="" srcset="" style="position: absolute; top: 13px; left: 0px; z-index: -1;">
+
+    <div class="landingPageContainer">
+        <h1>Quiz yourself on <br> <span style="color: #4B99E5;">Deceptive Patterns</span> </h1>
+        <p>Do you believe you are a good UX Designer? Find out how much you know about deceptive design pattterns.</p>
+        <button id="start-button" class="primaryButton">Start Quiz</button>    
+    </div>
+
+    <div class="questionContainer" id="questionContainer" style="background-color: black;">
+        <h2 class="questionNumber"><span id="subheadingQuestion"></span> out of 5</h2>
+        <div class="question" style="text-align: center;">
+            <h1 id="heading"></h1>
+            <p id="scenario"> </p>
+        </div>
+        <img id="questionPicture" alt="" srcset="">
+        <div class="buttonsQuestion">
+            <button id="button1" class="secondaryButton"></button>
+            <button id="button2" class="secondaryButton"></button>  
+        </div>
+    </div>
+
+    <div class="questionContainer" id="explanationContainer">
+        <h2 class="questionNumber"><span id="subheadingExplanation"></span> out of 10</h2>
+        <div style="text-align: center;">
+            <h1 id="answerHeading" style="color: black;"></h1>
+            <p id="answerParagraph" style="color: black;"></p>
+        </div>
+        <img id="answerPicture" alt="" srcset="">
+        <div class="callout" id="explanationCallout">
+            <h3>Why is it a dark pattern?</h3>
+            <div style="display: flex; align-items: center;">
+                <i class="fas fa-lightbulb"></i>  
+                <p id="explanationParagraph"></p>
+            </div>
+          
+        </div>
+        <button id="nextQuestionExplanationButton"></button>
+    </div>
+
+    <div class="leaderBoardContainer" id="leaderboardContainer">
+        <div style="text-align: center;">
+            <h1 id="congratsHeading"></h1>
+            <h2 id="scoreHeading"></h2>
+        </div>
+        <table>
+            <thead>
+              <tr>
+                <th>Username</th>
+                <th>Score</th>
+              </tr>
+            </thead>
+            <tbody id="leaderboard-data"></tbody>
+        </table>
+        <div >
+            <h3> Display your score in this leaderboard </h3>
+            <form class="add">
+                <label for="username">Username:</label>
+                <div style="display: flex; column-gap: 16px;">
+                    <input type="text" name="username">
+                    <button class="startQuiz primaryButton">Add me to leaderboard</button>
+                </div>
+               
+            </form>
+        </div>
+       
+    </div>
+    <script src="bundle.js"></script>
+</body>
+
+</html>
