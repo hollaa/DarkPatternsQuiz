@@ -21,33 +21,34 @@ body {
 }
 
 .primaryButton {
-  background-color: $green;
+  background-color: black;
   padding: 12px 24px;
   font-size: 16px;
   border-radius: 5px;
   border: none;
-  color: black;
+  color: white
 }
-
-.secondaryButton:hover {
-  background-color: $green;
-  color: black;
-  cursor: pointer;
-}
-
 .primaryButton:hover {
-  background-color: $lightGreen;
+  background-color: rgb(59, 59, 59);
   cursor: pointer;
 }
 
 .secondaryButton {
-  border: 1px solid #7CD676;
+  border: 1px solid $blue;
   border-radius: 5px;
-  color: #7CD676;
+  color: $blue;
   background-color: transparent;
   padding: 12px 24px;
   font-size: 16px;
   margin: 12px;
+  font-weight: bold;
+}
+
+
+.secondaryButton:hover {
+  background-color: $blue;
+  color: black;
+  cursor: pointer;
 }
 
 
@@ -119,7 +120,7 @@ body {
 }
 
 .callout h3 {
-  margin-top: 0;
+  margin: 0;
 }
 
 .lightbulb {

@@ -4,6 +4,7 @@ import {
 } from 'firebase/firestore'
 import './main.scss'
 
+
 const firebaseConfig = {
   apiKey: "AIzaSyDLkrpnxA4csgewSD58dxBCwQLqXOKrfa8",
   authDomain: "darkquiz-5191e.firebaseapp.com",
@@ -27,7 +28,7 @@ const questions = [
     subheading: "Question 1",
     heading: "Do you consider this as a deceptive pattern?",
     scenario: "Scenario: You found a really good recipe for french toast, you are casually following it, when suddenly this window pops out.",
-    picture: "../images/Question1.png",
+    picture: "../images/Question1@2x.png",
     answers: [
       {text: "Deceptive pattern", correct: true},
       {text: "Not a deceptive pattern", correct: false},
@@ -37,7 +38,7 @@ const questions = [
     subheading: "Question 2",
     heading: "Do you consider this as a deceptive pattern?",
     scenario: "Scenario: You want to buy a new limited edition of poster and the web informs you about the number of items left.  ",
-    picture: "../images/Question2.png",
+    picture: "../images/Question2@2x.png",
     answers: [
       {text: "Deceptive pattern", correct: false},
       {text: "Not a deceptive pattern", correct: true},
@@ -47,7 +48,7 @@ const questions = [
     subheading: "Question 3",
     heading: "Do you consider this as a deceptive pattern?",
     scenario: "Scenario: You opened the Figma software to work at your project, when Figma just released another update. ",
-    picture: "../images/Question3.png",
+    picture: "../images/Question3@2x.png",
     answers: [
       {text: "Deceptive pattern", correct: true},
       {text: "Not a deceptive pattern", correct: false},
@@ -57,7 +58,7 @@ const questions = [
     subheading: "Question 4",
     heading: "Do you consider this as a deceptive pattern?",
     scenario: "Scenario: You are shopping for a new parfume and the company automatically includes eco wrapping and insurance of your package because they mean well. ",
-    picture: "../images/Question4.png",
+    picture: "../images/Question4@2x.png",
     answers: [
       {text: "Deceptive pattern", correct: true},
       {text: "Not a deceptive pattern", correct: false},
@@ -67,7 +68,7 @@ const questions = [
     subheading: "Question 5",
     heading: "Do you consider this as a deceptive pattern?",
     scenario: "Scenario: You open a new website and a cookie banner pops out with no other option than to accept the cookies. You can still browse through the website, but the banner stays at the bottom.",
-    picture: "../images/Question5.png",
+    picture: "../images/Question5@2x.png",
     answers: [
       {text: "Deceptive pattern", correct: true},
       {text: "Not a deceptive pattern", correct: false},
@@ -77,7 +78,7 @@ const questions = [
     subheading: "Question 6",
     heading: "Do you consider this as a deceptive pattern?",
     scenario: "Scenario: You're about to perhaps accidentally delete an item from your online shopping cart. A pop-up appears asking 'Are you sure you want to delete this item?'.",
-    picture: "../images/Question6.png",
+    picture: "../images/Question6@2x.png",
     answers: [
       {text: "Deceptive pattern", correct: false},
       {text: "Not a deceptive pattern", correct: true},
@@ -88,7 +89,7 @@ const questions = [
     subheading: "Question 7",
     heading: "Do you consider this as a deceptive pattern?",
     scenario: "Scenario: You want to cancel your account on an e-shop since you no longer use it.",
-    picture: "../images/Question7.png",
+    picture: "../images/Question7@2x.png",
     answers: [
       {text: "Deceptive pattern", correct: true},
       {text: "Not a deceptive pattern", correct: false},
@@ -98,7 +99,7 @@ const questions = [
     subheading: "Question 8",
     heading: "Do you consider this as a deceptive pattern?",
     scenario: "Scenario: Imagine you're using a new fitness app. Every time you open the app, a pop-up appears prompting you to connect your social media accounts to share your workout achievements.",
-    picture: "../images/Question8.png",
+    picture: "../images/Question8@2x.png",
     answers: [
       {text: "Deceptive pattern", correct: true},
       {text: "Not a deceptive pattern", correct: false},
@@ -108,7 +109,7 @@ const questions = [
     subheading: "Question 9",
     heading: "Do you consider this as a deceptive pattern?",
     scenario: "Scenario: You are playing a game and to buy extra features, you have to purchase their currency. The 'gems' never exprire but it is not possible to transfer them back to your bank account.",
-    picture: "../images/Question9.png",
+    picture: "../images/Question9@2x.png",
     answers: [
       {text: "Deceptive pattern", correct: true},
       {text: "Not a deceptive pattern", correct: false},
@@ -118,7 +119,7 @@ const questions = [
     subheading: "Question 10",
     heading: "Do you consider this as a deceptive pattern?",
     scenario: "Scenario: You were browsing for a new book on Amazon and the next time you opened the page, you saw a section titled 'Related to items you viewed' filled with tempting accessories for your ereader.",
-    picture: "../images/Question10.png",
+    picture: "../images/Question10@2x.png",
     answers: [
       {text: "Deceptive pattern", correct: false},
       {text: "Not a deceptive pattern", correct: true},
@@ -130,42 +131,42 @@ const explanations = [
   {
     subheading: "Question 1",
     paragpraph: "The past example was a deceptive pattern",
-    picture: "../images/Question1.png",
+    picture: "../images/Question1@2x.png",
     explanation: "This is deceptive pattern type “Toying with emotions”, where the author includes any use of language, style, color,or other similar elements to evoke an emotion in order to persuade the user into a particular action.",
     nextButton: "Next Question",
   },
   {
     subheading: "Question 2",
     paragpraph: "The past example was a not a deceptive pattern. Informing the user about the real number of items that is left, is actually good for the user.",
-    picture: "../images/Question2.png",
+    picture: "../images/Question2@2x.png",
     explanation: " ",
     nextButton: "Next Question",
   },
   {
     subheading: "Question 3",
     paragpraph: "The past example was a deceptive pattern",
-    picture: "../images/Question3.png",
+    picture: "../images/Question3@2x.png",
     explanation: "While Figma's team likely wants to ensure everyone experiences the benefits of their latest updates, requiring an update can disrupt your current or future workflow and they use 'Forced Action' deceptive pattern for that",
     nextButton: "Next Question",
   },
   {
     subheading: "Question 4",
     paragpraph: "The past example was a deceptive pattern",
-    picture: "../images/Question4.png",
+    picture: "../images/Question4@2x.png",
     explanation: "The e-shop's automatic addition of eco wrapping or insurance to your cart exemplifies either 'Presumed Consent' or 'Sneak into Basket' deceptive patterns, unfairly capitalizing on your potential eco-friendliness. ",
     nextButton: "Next Question",
   },
   {
     subheading: "Question 5",
     paragpraph: "The past example was a deceptive pattern",
-    picture: "../images/Question5.png",
+    picture: "../images/Question5@2x.png",
     explanation: " The lack of a reject button in a cookie consent banner is a 'Forced Action' deceptive pattern, limiting user choice and hindering informed consent.",
     nextButton: "Next Question",
   },
   {
     subheading: "Question 6",
     paragpraph: "The past example was not a deceptive pattern. This pop-up prevents accidental actions and offers a clear 'Leave' button to undo the deletion. It helps users confirm their intentions without creating undue pressure.",
-    picture: "../images/Question6.png",
+    picture: "../images/Question6@2x.png",
     explanation: " ",
     nextButton: "Next Question",
   },
@@ -173,14 +174,14 @@ const explanations = [
   {
     subheading: "Question 7",
     paragpraph: "The past example was a deceptive pattern",
-    picture: "../images/Question7.png",
+    picture: "../images/Question7@2x.png",
     explanation: "The company is making it significantly harder to cancel the users account and this pattern is called 'Roach Motel'. Usually, once the user calls them, they try to also pressure them to keep the account.",
     nextButton: "Next Question",
   },
   {
     subheading: "Question 8",
     paragpraph: "The past example was a deceptive pattern",
-    picture: "../images/Question8.png",
+    picture: "../images/Question8@2x.png",
     explanation: "This is a nagging dark pattern. It uses repeated prompts to persistently nudge you towards an action (social media connection) that you might not necessarily want to take ",
     nextButton: "Next Question",
   },
@@ -188,14 +189,14 @@ const explanations = [
   {
     subheading: "Question 9",
     paragpraph: "The past example was a deceptive pattern",
-    picture: "../images/Question9.png",
+    picture: "../images/Question9@2x.png",
     explanation: " The in-app gem purchase is an 'Intermediate currency' deceptive pattern, designed to disconnect you from the real cost and potentially lead to overspending.",
     nextButton: "Next Question",
   },
   {
     subheading: "Question 10",
     paragpraph: "The past example was not a deceptive pattern. While 'Releated to items you viewed' suggests personalization, it doesn't pressure the purchase or obscure the actual cost, making it a helpful suggestion rather than a deceptive pattern.",
-    picture: "../images/Question10.png",
+    picture: "../images/Question10@2x.png",
     explanation: " ",
     nextButton: "Finish",
   },
@@ -284,8 +285,6 @@ startButton.addEventListener("click", () => {
   showQuestion();
 });
 
-
-
 function showExplanation(correct) {
   questionContainerElement.style.display = "none"
   const explanation = explanations[currentQuestion];
@@ -293,16 +292,21 @@ function showExplanation(correct) {
   explanationSubheadingElement.textContent = explanation.subheading;
   if(correct){
     answerHeadingElement.textContent = "You are right!"
+    answerHeadingElement.insertAdjacentHTML('afterbegin', '&nbsp;');
+    answerHeadingElement.insertAdjacentHTML('afterbegin', '<i class="fa-regular fa-circle-check"></i>');
+    answerHeadingElement.style.color = '#7CD676'
     nextButtonExplanationElement.textContent = explanation.nextButton;
     nextButtonExplanationElement.addEventListener("click", () => showQuestion())
   }
   else{
-    answerHeadingElement.textContent = "Quiz over!"
-    nextButtonExplanationElement.textContent = "Quiz Over"
-    nextButtonExplanationElement.addEventListener("click", () => {
-     gameOver();
-    })
+    answerHeadingElement.textContent = "Oops that was not correct";
+    answerHeadingElement.insertAdjacentHTML('afterbegin', '&nbsp;');
+    answerHeadingElement.insertAdjacentHTML('afterbegin', '<i class="fa-regular fa-circle-xmark"></i>');
+    answerHeadingElement.style.color = '#D67676'
   }
+
+  nextButtonExplanationElement.textContent = explanation.nextButton;
+  nextButtonExplanationElement.addEventListener("click", () => showQuestion())
 
   answerParagraphElement.textContent = explanation.paragpraph;
   answerPictureElement.src = explanation.picture;
