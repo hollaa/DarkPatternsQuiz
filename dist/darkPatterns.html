@@ -10,18 +10,24 @@
 </head>
 
 <body>
-    <img src="../images/Vector.svg" alt="" srcset="" style="position: absolute; bottom: 13px; right: 0px; z-index: -1;">
-    <img src="../images/blob1.svg" alt="" srcset="" style="position: absolute; top: 13px; left: 0px; z-index: -1;">
+    <button class="primaryButton" style="position: absolute; top: 24px; left: 24px;"> <a href="index.html" style="text-decoration: none; color: white;">Quiz</a></button>
+    
 
     <section class="landingPageContainer" style="min-height: 100vh;">
-        <h2>What are</h2>
-        <h1 style="color: #4B99E5; margin: 0">Deceptive Patterns</h1>
-        <p>As designers, we strive for intuitive experiences. But what if subtle manipulation lurks beneath the surface?
-            Let's delve into dark patterns and explore ethical design solutions.
-        </p>
-        <button class="primaryButton" id="exploreButton">Explore dark patterns</button>
+        <img src="../images/Vector.svg" alt="" srcset="" style="position: absolute; bottom: 13px; right: 0px; z-index: -1;">
+        <img src="../images/blob1.svg" alt="" srcset="" style="position: absolute; top: 13px; left: 0px; z-index: -1;">
+        <div style="text-align: center;">
+            <h2 style="margin: 0;">What are</h2>
+            <h1 style="color: #4B99E5; margin: 0">Deceptive Patterns</h1>
+            <p>As designers, we strive for intuitive experiences. But what if subtle manipulation lurks beneath the surface?
+                Let's delve into dark patterns and explore ethical design solutions.
+            </p>
+        </div>
+      
+        <button class="primaryButton" id="exploreButton">Explore deceptive patterns</button>
     </section>
     <section class="darkPatternTypesContainer">
+        <h2>5 types of deceptive patterns</h2>
         <button class="accordion" style="border-radius: 5px 5px 0 0;">Nagging</button>
         <div class="panel">
             <p>In the context of user interactions, nagging is described as a minor redirection of expected
@@ -60,50 +66,66 @@
         <div class="panel">
             <p>Sneaking refers to the deliberate withholding or delay of important information from users, often leading
                 them to take actions they might otherwise resist if fully informed. Common manifestations of sneaking
-                include undisclosed costs or unintended outcomes from specific user actions. <br> <a
-                    href="https://90percentofeverything.com/about/index.html" target=”_blank”>Brignull’s </a> taxonomy
-                of dark patterns clarifies several variants of sneaking tactics. The "Forced Continuity" pattern takes
-                advantage of users' ignorance of subscription timetables to silently prolong fees after services expire.
-                Similarly, the "Hidden Costs" pattern initially advertises prices that subsequently escalate due to
-                additional fees or conditions. Additionally, the "Sneak into Basket" strategy secretly adds unselected
-                items to online shopping carts, potentially leading to inadvertent purchases. Lastly, the "Bait and
-                Switch" technique deceives users by promising one outcome but delivering another, as demonstrated by
-                misleading button functions in user interfaces such as having an “X” button that does something other
-                than close a popup window.
+                include undisclosed costs or unintended outcomes from specific user actions. <br> <a href="https://90percentofeverything.com/about/index.html" target=”_blank”>Brignull’s </a> taxonomy
+                of dark patterns clarifies four variants of sneaking tactics: 
+                <ul>
+                    <li>
+                        "Forced Continuity" pattern takes advantage of users' ignorance of subscription timetables to   silently prolong fees after services expire.
+                    </li>
+                    <li>
+                        "Hidden Costs" pattern initially advertises prices that subsequently escalate due to
+                        additional fees or conditions.
+                    </li>
+                    <li>
+                        "Sneak into Basket" strategy secretly adds unselected items to online shopping carts, potentially leading to inadvertent purchases.
+                    </li>
+                    <li>
+                        "Bait and Switch" technique deceives users by promising one outcome but delivering another, an example would be a misleading button functions in user interfaces such as having an “X” button that does something other than close a popup window.
+                    </li>
+                </ul>
             </p>
         </div>
         <button class="accordion">Interface Interference</button>
         <div class="panel">
             <p>Interface Interference is about strategies in design that subtly favor certain actions over others, often
                 leading to confusion among users or making it difficult for them to discover crucial options. These
-                strategies employ a mix of visual and interactive deceptions, broadly classified into hidden
-                information, preselection, and aesthetic manipulation. Hidden information, a subcategory of Interface
-                Interference, is the act of obscuring vital choices or information, such as embedding a crucial opt-out
-                checkbox within dense legal text, making it hard for users to find or access them easily. This tactic
-                often involves presenting important user options in a manner that disguises them as irrelevant or
-                secondary, requiring users to exert extra effort to uncover them. Preselection automatically sets
-                options in favor of the service provider's preferences, subtly steering users toward making choices that
-                might not align with their own interests. This is commonly seen in forms where options like data sharing
-                or newsletter subscriptions are pre-checked, nudging users toward decisions they might not have
-                consciously chosen. Aesthetic manipulation leverages design to affect user decisions, using misleading
-                visuals or emotional triggers to influence actions. This includes making certain content appear
-                inaccessible without payment or employing countdown timers and language that apply pressure or evoke
-                emotional responses to push users toward specific actions. These tactics, through their various
-                implementations, aim to subtly direct user behavior by leveraging emotional responses or creating
-                misleading impressions, ultimately guiding users into making choices they might not have made if
-                presented transparently. Analyzing examples from diverse websites underscores the urgent need for
-                ethical design principles that respect user autonomy and promote transparency.
+                strategies use a mix of visual and interactive deceptions:
+                
+                <ul>
+                    <li>
+                        "Hidden information" is the act of obscuring  choices or information, such as embedding a crucial opt-out checkbox within dense legal text, making it hard for users to find or access them easily. This tactic often involves presenting important user options in a manner that disguises them as irrelevant or
+                        secondary, requiring users to exert extra effort to uncover them.
+                    </li>
+                    <li>
+                        "Preselection" automatically sets options in favor of the service provider's preferences, subtly steering users toward making choices that might not align with their own interests. This is commonly seen in forms where options like data sharing or newsletter subscriptions are pre-checked.
+                    </li>
+                    <li>
+                        "Aesthetic manipulation" leverages design to affect user decisions, using misleading
+                        visuals or emotional triggers to influence actions. This includes making certain content appear
+                        inaccessible without payment or employing countdown timers and language that apply pressure or evoke
+                        emotional responses to push users toward specific actions.
+                    </li>
+                </ul>
             </p>
         </div>
         <button class="accordion" style="border-radius: 0 0 5px 5px;">Forced Action</button>
         <div class="panel">
             <p>Forced action pressures users to perform certain tasks to access functionalities, such as mandatory
-                updates or agreeing to data sale terms for unsubscribing from services. There are three subcategories in
-                Forced Action: Social Pyramid, Privacy Zuckering and Gamification. Social Pyramid schemes forces users
-                to recruit others for benefits, like in FarmVille, where game features depend on inviting friends.
-                Privacy Zuckering tricks users into oversharing personal information, often hidden in terms and
-                conditions. Gamification forces users into repetitive tasks for service benefits, as seen in Candy Crush
-                Saga, where progress can be slow without purchases, encouraging users to spend money for advancement.
+                updates or agreeing to data sale terms for unsubscribing from services. <br> There are three subcategories in
+                Forced Action:
+                <ul>
+                    <li>
+                        "Social Pyramid" schemes forces users to recruit others for benefits, for example in FarmVille, where game features depend on inviting friends
+                    </li>
+                    <li>
+                        "Privacy Zuckering" tricks users into oversharing personal information, often hidden in terms and
+                        conditions.
+                    </li>
+                    <li>
+                        "Gamification" forces users into repetitive tasks for service benefits, as seen in Candy Crush
+                        Saga, where progress can be slow without purchases, encouraging users to spend money for advancement.
+                    </li>
+                </ul>
             </p>
         </div>
 

@@ -230,6 +230,11 @@ thead th {
   transition: max-height 0.2s ease-out;
 }
 
+footer{
+  display: none;
+  background-color: $lightBlue;
+}
+
 // Media Queries for Responsiveness
 @media (max-width: 768px) {
   .blobImage {
