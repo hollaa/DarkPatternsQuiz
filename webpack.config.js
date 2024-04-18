@@ -8,12 +8,24 @@ module.exports = {
         filename: 'bundle.js'
     },
     module: {
-        rules: [
+      rules: [
           {
-            test: /\.scss$/i,
-            use: ["style-loader", "css-loader", "sass-loader"],
+              test: /\.scss$/i,
+              use: ["style-loader", "css-loader", "sass-loader"],
           },
-        ],
-      },
+          {
+              test: /\.(png|svg|jpg|jpeg|gif)$/i,
+              use: [
+                  {
+                      loader: 'file-loader',
+                      options: {
+                          name: '[name].[ext]',
+                          outputPath: 'images/'
+                      }
+                  }
+              ]
+          }
+      ],
+  },
     watch: true
 }

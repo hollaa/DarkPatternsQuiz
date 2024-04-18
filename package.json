@@ -10,6 +10,7 @@
   "main": "index.js",
   "devDependencies": {
     "css-loader": "^6.10.0",
+    "file-loader": "^6.2.0",
     "sass": "^1.72.0",
     "sass-loader": "^14.1.1",
     "style-loader": "^3.3.4",
