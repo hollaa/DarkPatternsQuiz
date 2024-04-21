@@ -148,6 +148,7 @@ const explanations = [
     subheading: "Question 3",
     paragpraph: "The past example was a deceptive pattern",
     picture: "images/Question3@2x.png",
+    redesign: "images/Question3Redesign@2x.png",
     explanation: "While Figma's team likely wants to ensure everyone experiences the benefits of their latest updates, requiring an update can disrupt your current or future workflow and they use 'Forced Action' deceptive pattern for that",
     nextButton: "Next Question",
   },
@@ -155,6 +156,7 @@ const explanations = [
     subheading: "Question 4",
     paragpraph: "The past example was a deceptive pattern",
     picture: "images/Question4@2x.png",
+    redesign: "images/Question4Redesign@2x.png",
     explanation: "The e-shop's automatic addition of eco wrapping or insurance to your cart exemplifies either 'Presumed Consent' or 'Sneak into Basket' deceptive patterns, unfairly capitalizing on your potential eco-friendliness. ",
     nextButton: "Next Question",
   },
@@ -162,6 +164,7 @@ const explanations = [
     subheading: "Question 5",
     paragpraph: "The past example was a deceptive pattern",
     picture: "images/Question5@2x.png",
+    redesign: "images/Question5Redesign@2x.png",
     explanation: " The lack of a reject button in a cookie consent banner is a 'Forced Action' deceptive pattern, limiting user choice and hindering informed consent.",
     nextButton: "Next Question",
   },
@@ -177,6 +180,7 @@ const explanations = [
     subheading: "Question 7",
     paragpraph: "The past example was a deceptive pattern",
     picture: "images/Question7@2x.png",
+    redesign: "images/Question7Redesign@2x.png",
     explanation: "The company is making it significantly harder to cancel the users account and this pattern is called 'Roach Motel'. Usually, once the user calls them, they try to also pressure them to keep the account.",
     nextButton: "Next Question",
   },
@@ -184,6 +188,7 @@ const explanations = [
     subheading: "Question 8",
     paragpraph: "The past example was a deceptive pattern",
     picture: "images/Question8@2x.png",
+    redesign: "images/Question8Redesign@2x.png",
     explanation: "This is a nagging dark pattern. It uses repeated prompts to persistently nudge you towards an action (social media connection) that you might not necessarily want to take ",
     nextButton: "Next Question",
   },
@@ -192,6 +197,7 @@ const explanations = [
     subheading: "Question 9",
     paragpraph: "The past example was a deceptive pattern",
     picture: "images/Question9@2x.png",
+    redesign: "images/Question9Redesign@2x.png",
     explanation: " The in-app gem purchase is an 'Intermediate currency' deceptive pattern, designed to disconnect you from the real cost and potentially lead to overspending.",
     nextButton: "Next Question",
   },
@@ -227,6 +233,7 @@ const answerHeadingElement = document.getElementById("answerHeading");
 const answerParagraphElement = document.getElementById("answerParagraph");
 const answerPictureElement = document.getElementById("answerPicture");
 const redesignPictureElement = document.getElementById("redesignPicture");
+const redesignLabelELement = document.getElementById("redesignLabel");
 const explanationParagraphElement = document.getElementById("explanationParagraph")
 const nextButtonExplanationElement = document.getElementById("nextQuestionExplanationButton");
 const explanationCalloutElement = document.getElementById("explanationCallout")
@@ -315,9 +322,10 @@ function showExplanation(correct) {
   answerParagraphElement.textContent = explanation.paragpraph;
   answerPictureElement.src = explanation.picture;
   if(explanation.redesign.trim()){
+    redesignLabelELement.style.display = "block"
     redesignPictureElement.src = explanation.redesign;
   }else{
-    redesignPictureElement.style.display = "none"
+    redesignLabelELement.style.display = "none"
   }
   if (!explanation.explanation.trim()) {
     explanationCalloutElement.style.display = "none";
