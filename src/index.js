@@ -132,6 +132,7 @@ const explanations = [
     subheading: "Question 1",
     paragpraph: "The past example was a deceptive pattern",
     picture: "../images/Question1@2x.png",
+    redesign: "../images/Question1Redesign@2x.png",
     explanation: "This is deceptive pattern type “Toying with emotions”, where the author includes any use of language, style, color,or other similar elements to evoke an emotion in order to persuade the user into a particular action.",
     nextButton: "Next Question",
   },
@@ -139,6 +140,7 @@ const explanations = [
     subheading: "Question 2",
     paragpraph: "The past example was a not a deceptive pattern. Informing the user about the real number of items that is left, is actually good for the user.",
     picture: "../images/Question2@2x.png",
+    redesign:" ",
     explanation: " ",
     nextButton: "Next Question",
   },
@@ -224,6 +226,7 @@ const explanationSubheadingElement = document.getElementById("subheadingExplanat
 const answerHeadingElement = document.getElementById("answerHeading");
 const answerParagraphElement = document.getElementById("answerParagraph");
 const answerPictureElement = document.getElementById("answerPicture");
+const redesignPictureElement = document.getElementById("redesignPicture");
 const explanationParagraphElement = document.getElementById("explanationParagraph")
 const nextButtonExplanationElement = document.getElementById("nextQuestionExplanationButton");
 const explanationCalloutElement = document.getElementById("explanationCallout")
@@ -311,6 +314,11 @@ function showExplanation(correct) {
 
   answerParagraphElement.textContent = explanation.paragpraph;
   answerPictureElement.src = explanation.picture;
+  if(explanation.redesign.trim()){
+    redesignPictureElement.src = explanation.redesign;
+  }else{
+    redesignPictureElement.style.display = "none"
+  }
   if (!explanation.explanation.trim()) {
     explanationCalloutElement.style.display = "none";
   } else {
