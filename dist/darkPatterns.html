@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <title>Deceptive Patterns Quiz</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+
 
 </head>
 
 <body>
-    <button class="primaryButton" style="position: absolute; top: 24px; left: 24px;"> <a href="index.html" style="text-decoration: none; color: white;">Quiz</a></button>
+    <button class="secondaryButton" style="position: absolute; top: 24px; left: 24px;" onclick="goToIndex()"> Quiz</button>
     
 
     <section class="landingPageContainer" style="min-height: 100vh;">
@@ -20,7 +22,7 @@
             <h2 style="margin: 0;">What are</h2>
             <h1 style="color: #4B99E5; margin: 0">Deceptive Patterns</h1>
             <p>As designers, we strive for intuitive experiences. But what if subtle manipulation lurks beneath the surface?
-                Let's delve into dark patterns and explore ethical design solutions.
+                Let's delve into deceptive patterns and explore ethical design solutions.
             </p>
         </div>
       
@@ -131,6 +133,11 @@
 
 
     </section>
+    <footer style="display: block;">
+        <div>
+            <p>This website was created as a prototype for research purposes. In case of any questions, feel free to contact me on my LinkedIn <a href="" target="_blank">Alica Holla</a> or send me an e-mail to alica.holla@gmail.com</p>
+        </div>
+    </footer>
 
 
     <script src="bundle.js"></script>
@@ -155,7 +162,11 @@
                     panel.style.maxHeight = panel.scrollHeight + "px";
                 }
             });
-        } 
+        }
+        
+        function goToIndex() {
+  window.location.href = "index.html";
+}
     </script>
 </body>
 

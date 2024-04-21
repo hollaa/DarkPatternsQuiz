@@ -30,8 +30,8 @@ const questions = [
     scenario: "Scenario: You found a really good recipe for french toast, you are casually following it, when suddenly this window pops out.",
     picture: "../images/Question1@2x.png",
     answers: [
-      {text: "Deceptive pattern", correct: true},
-      {text: "Not a deceptive pattern", correct: false},
+      { text: "Deceptive pattern", correct: true },
+      { text: "Not a deceptive pattern", correct: false },
     ]
   },
   {
@@ -40,8 +40,8 @@ const questions = [
     scenario: "Scenario: You want to buy a new limited edition of poster and the web informs you about the number of items left.  ",
     picture: "../images/Question2@2x.png",
     answers: [
-      {text: "Deceptive pattern", correct: false},
-      {text: "Not a deceptive pattern", correct: true},
+      { text: "Deceptive pattern", correct: false },
+      { text: "Not a deceptive pattern", correct: true },
     ]
   },
   {
@@ -50,8 +50,8 @@ const questions = [
     scenario: "Scenario: You opened the Figma software to work at your project, when Figma just released another update. ",
     picture: "../images/Question3@2x.png",
     answers: [
-      {text: "Deceptive pattern", correct: true},
-      {text: "Not a deceptive pattern", correct: false},
+      { text: "Deceptive pattern", correct: true },
+      { text: "Not a deceptive pattern", correct: false },
     ]
   },
   {
@@ -60,8 +60,8 @@ const questions = [
     scenario: "Scenario: You are shopping for a new parfume and the company automatically includes eco wrapping and insurance of your package because they mean well. ",
     picture: "../images/Question4@2x.png",
     answers: [
-      {text: "Deceptive pattern", correct: true},
-      {text: "Not a deceptive pattern", correct: false},
+      { text: "Deceptive pattern", correct: true },
+      { text: "Not a deceptive pattern", correct: false },
     ]
   },
   {
@@ -70,8 +70,8 @@ const questions = [
     scenario: "Scenario: You open a new website and a cookie banner pops out with no other option than to accept the cookies. You can still browse through the website, but the banner stays at the bottom.",
     picture: "../images/Question5@2x.png",
     answers: [
-      {text: "Deceptive pattern", correct: true},
-      {text: "Not a deceptive pattern", correct: false},
+      { text: "Deceptive pattern", correct: true },
+      { text: "Not a deceptive pattern", correct: false },
     ]
   },
   {
@@ -80,19 +80,19 @@ const questions = [
     scenario: "Scenario: You're about to perhaps accidentally delete an item from your online shopping cart. A pop-up appears asking 'Are you sure you want to delete this item?'.",
     picture: "../images/Question6@2x.png",
     answers: [
-      {text: "Deceptive pattern", correct: false},
-      {text: "Not a deceptive pattern", correct: true},
+      { text: "Deceptive pattern", correct: false },
+      { text: "Not a deceptive pattern", correct: true },
     ]
   },
-  
+
   {
     subheading: "Question 7",
     heading: "Do you consider this as a deceptive pattern?",
     scenario: "Scenario: You want to cancel your account on an e-shop since you no longer use it.",
     picture: "../images/Question7@2x.png",
     answers: [
-      {text: "Deceptive pattern", correct: true},
-      {text: "Not a deceptive pattern", correct: false},
+      { text: "Deceptive pattern", correct: true },
+      { text: "Not a deceptive pattern", correct: false },
     ]
   },
   {
@@ -101,8 +101,8 @@ const questions = [
     scenario: "Scenario: Imagine you're using a new fitness app. Every time you open the app, a pop-up appears prompting you to connect your social media accounts to share your workout achievements.",
     picture: "../images/Question8@2x.png",
     answers: [
-      {text: "Deceptive pattern", correct: true},
-      {text: "Not a deceptive pattern", correct: false},
+      { text: "Deceptive pattern", correct: true },
+      { text: "Not a deceptive pattern", correct: false },
     ]
   },
   {
@@ -111,8 +111,8 @@ const questions = [
     scenario: "Scenario: You are playing a game and to buy extra features, you have to purchase their currency. The 'gems' never exprire but it is not possible to transfer them back to your bank account.",
     picture: "../images/Question9@2x.png",
     answers: [
-      {text: "Deceptive pattern", correct: true},
-      {text: "Not a deceptive pattern", correct: false},
+      { text: "Deceptive pattern", correct: true },
+      { text: "Not a deceptive pattern", correct: false },
     ]
   },
   {
@@ -121,8 +121,8 @@ const questions = [
     scenario: "Scenario: You were browsing for a new book on Amazon and the next time you opened the page, you saw a section titled 'Related to items you viewed' filled with tempting accessories for your ereader.",
     picture: "../images/Question10@2x.png",
     answers: [
-      {text: "Deceptive pattern", correct: false},
-      {text: "Not a deceptive pattern", correct: true},
+      { text: "Deceptive pattern", correct: false },
+      { text: "Not a deceptive pattern", correct: true },
     ]
   },
 ];
@@ -170,7 +170,7 @@ const explanations = [
     explanation: " ",
     nextButton: "Next Question",
   },
-  
+
   {
     subheading: "Question 7",
     paragpraph: "The past example was a deceptive pattern",
@@ -230,6 +230,7 @@ const explanationCalloutElement = document.getElementById("explanationCallout")
 
 const darkPatternPageButtonElement = document.querySelector(".dpNextpage");
 const tryAgainButtonElement = document.getElementById("tryAgainButton");
+const footer = document.getElementsByTagName('footer');
 
 function showQuestion() {
   explanationContainerElement.style.display = "none";
@@ -237,8 +238,8 @@ function showQuestion() {
 
   questionContainerElement.style.display = "flex";
 
-  button1Element.removeEventListener("click", handleButtonClick );
-  button2Element.removeEventListener("click", handleButtonClick );
+  button1Element.removeEventListener("click", handleButtonClick);
+  button2Element.removeEventListener("click", handleButtonClick);
 
   if (currentQuestion >= questions.length) {
     gameOver();
@@ -253,7 +254,7 @@ function showQuestion() {
 
   button1Element.textContent = question.answers[0].text;
   button2Element.textContent = question.answers[1].text;
-  
+
   button1Element.addEventListener("click", handleButtonClick);
   button2Element.addEventListener("click", handleButtonClick);
 
@@ -267,7 +268,7 @@ function handleButtonClick(event) {
   isAnswerSubmitted = true;
   const clickedButton = event.target;
   const isCorrect = clickedButton === button1Element ? questions[currentQuestion].answers[0].correct : questions[currentQuestion].answers[1].correct;
-  
+
   if (isCorrect) {
     score++;
     showExplanation(true);
@@ -290,7 +291,7 @@ function showExplanation(correct) {
   const explanation = explanations[currentQuestion];
   explanationContainerElement.style.display = "flex";
   explanationSubheadingElement.textContent = explanation.subheading;
-  if(correct){
+  if (correct) {
     answerHeadingElement.textContent = "You are right!"
     answerHeadingElement.insertAdjacentHTML('afterbegin', '&nbsp;');
     answerHeadingElement.insertAdjacentHTML('afterbegin', '<i class="fa-regular fa-circle-check"></i>');
@@ -298,7 +299,7 @@ function showExplanation(correct) {
     nextButtonExplanationElement.textContent = explanation.nextButton;
     nextButtonExplanationElement.addEventListener("click", () => showQuestion())
   }
-  else{
+  else {
     answerHeadingElement.textContent = "Oops that was not correct";
     answerHeadingElement.insertAdjacentHTML('afterbegin', '&nbsp;');
     answerHeadingElement.insertAdjacentHTML('afterbegin', '<i class="fa-regular fa-circle-xmark"></i>');
@@ -318,23 +319,27 @@ function showExplanation(correct) {
   }
 }
 
-function gameOver(){
+function gameOver() {
   explanationContainerElement.style.display = "none"
   leaderboardContainerElement.style.display = "flex";
-  if(score > 3){
+  if (score > 5) {
     congratsHeadingElement.textContent = "Congratulations, you're a deceptive patterns master!"
   }
-  else{
-    congratsHeadingElement.textContent = "Oops, that did not work out "
+  else {
+    congratsHeadingElement.textContent = "Well that could have been better"
   }
   scoreHeading.textContent = `Your score is ${score} out of 10`;
   questionContainerElement.style.display = "none";
 
+  const addUsernameForm = document.querySelector('.add');
   onSnapshot(colRef, (snapshot) => {
     let scores = [];
     snapshot.docs.forEach((doc) => {
       scores.push({ ...doc.data(), id: doc.id });
     });
+
+    // Sort scores array by score in descending order
+    scores.sort((a, b) => b.score - a.score); 
 
     leaderboardTableBody.innerHTML = ""; // Clear existing data before adding new entries
 
@@ -365,22 +370,22 @@ function gameOver(){
     isAnswerSubmitted = false;
     leaderboardContainerElement.style.display = "none";
     landingPageContainer.style.display = "flex";
+    footer.style.display = "none";
+
   });
-  
+  footer.style.display = "block";
 }
 
 
 
-//adding a username
 const addUsername = document.querySelector('.add');
 addUsername.addEventListener('submit', (e) => {
   e.preventDefault()
   addDoc(colRef, {
     username: addUsername.username.value,
-    score: score
+    score: score // Assuming you have a way to get the score value
   })
     .then(() => {
       addUsername.reset();
     })
 })
-
