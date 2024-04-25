@@ -211,6 +211,13 @@ const darkPatternPageButtonElement = document.querySelector(".dpNextpage");
 const tryAgainButtonElement = document.getElementById("tryAgainButton");
 const footer = document.getElementsByTagName('footer');
 
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1)); // random index from 0 to i
+      [array[i], array[j]] = [array[j], array[i]]; // swap elements
+  }
+}
+
 function showQuestion() {
   explanationContainerElement.style.display = "none";
   leaderboardContainerElement.style.display = "none";
@@ -226,7 +233,7 @@ function showQuestion() {
   }
 
   const question = questions[currentQuestion];
-  subheadingQuestionElement.textContent = question.subheading;
+  subheadingQuestionElement.textContent = currentQuestion+1;
   headingElement.textContent = question.heading;
   scenarioElement.textContent = question.scenario;
   pictureElement.src = question.picture;
@@ -247,7 +254,6 @@ function handleButtonClick(event, question) {
   isAnswerSubmitted = true;
   const clickedButton = event.target;
   const isCorrect = clickedButton === button1Element ? questions[currentQuestion].answers[0].correct : questions[currentQuestion].answers[1].correct;
-  console.log(currentQuestion);
 
   if (isCorrect) {
     score++;
@@ -263,6 +269,8 @@ const startButton = document.getElementById("start-button");
 const landingPageContainer = document.querySelector(".landingPageContainer");
 startButton.addEventListener("click", () => {
   landingPageContainer.style.display = "none";
+  shuffleArray(questions); // Shuffle the questions
+  currentQuestion = 0;
   showQuestion();
 });
 
@@ -270,7 +278,7 @@ function showExplanation(correct) {
   questionContainerElement.style.display = "none"
   const question = questions[currentQuestion];
   explanationContainerElement.style.display = "flex";
-  explanationSubheadingElement.textContent = question.subheading;
+  explanationSubheadingElement.textContent = currentQuestion+1;
   if (correct) {
     answerHeadingElement.textContent = "You are right!"
     answerHeadingElement.insertAdjacentHTML('afterbegin', '&nbsp;');
@@ -286,7 +294,14 @@ function showExplanation(correct) {
     answerHeadingElement.style.color = '#D67676'
   }
 
-  nextButtonExplanationElement.textContent = question.nextButton;
+  if (currentQuestion+1 >= questions.length) {
+    nextButtonExplanationElement.textContent = "Finish"
+  }
+  else{
+    nextButtonExplanationElement.textContent = "Next Question"
+
+  }
+
   nextButtonExplanationElement.addEventListener("click", () => showQuestion())
 
   answerParagraphElement.textContent = question.paragpraph;
