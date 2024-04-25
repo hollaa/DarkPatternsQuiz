@@ -32,7 +32,12 @@ const questions = [
     answers: [
       { text: "Deceptive pattern", correct: true },
       { text: "Not a deceptive pattern", correct: false },
-    ]
+    ], 
+    
+    paragpraph: "The past example was a deceptive pattern",
+    redesign: "images/Question1Redesign@2x.png",
+    explanation: "This is deceptive pattern type “Toying with emotions”, where the author includes any use of language, style, color,or other similar elements to evoke an emotion in order to persuade the user into a particular action.",
+    nextButton: "Next Question",
   },
   {
     subheading: "Question 2",
@@ -42,7 +47,12 @@ const questions = [
     answers: [
       { text: "Deceptive pattern", correct: false },
       { text: "Not a deceptive pattern", correct: true },
-    ]
+    ],
+
+    paragpraph: "The past example was a not a deceptive pattern. Informing the user about the real number of items that is left, is actually good for the user.",
+    redesign:" ",
+    explanation: " ",
+    nextButton: "Next Question",
   },
   {
     subheading: "Question 3",
@@ -52,7 +62,12 @@ const questions = [
     answers: [
       { text: "Deceptive pattern", correct: true },
       { text: "Not a deceptive pattern", correct: false },
-    ]
+    ],
+    
+    paragpraph: "The past example was a deceptive pattern",
+    redesign: "images/Question3Redesign@2x.png",
+    explanation: "While Figma's team likely wants to ensure everyone experiences the benefits of their latest updates, requiring an update can disrupt your current or future workflow and they use 'Forced Action' deceptive pattern for that",
+    nextButton: "Next Question",
   },
   {
     subheading: "Question 4",
@@ -62,7 +77,13 @@ const questions = [
     answers: [
       { text: "Deceptive pattern", correct: true },
       { text: "Not a deceptive pattern", correct: false },
-    ]
+    ],
+
+    subheading: "Question 4",
+    paragpraph: "The past example was a deceptive pattern",
+    redesign: "images/Question4Redesign@2x.png",
+    explanation: "The e-shop's automatic addition of eco wrapping or insurance to your cart exemplifies either 'Presumed Consent' or 'Sneak into Basket' deceptive patterns, unfairly capitalizing on your potential eco-friendliness. ",
+    nextButton: "Next Question",
   },
   {
     subheading: "Question 5",
@@ -72,7 +93,12 @@ const questions = [
     answers: [
       { text: "Deceptive pattern", correct: true },
       { text: "Not a deceptive pattern", correct: false },
-    ]
+    ],
+
+    paragpraph: "The past example was a deceptive pattern",
+    redesign: "images/Question5Redesign@2x.png",
+    explanation: " The lack of a reject button in a cookie consent banner is a 'Forced Action' deceptive pattern, limiting user choice and hindering informed consent.",
+    nextButton: "Next Question",
   },
   {
     subheading: "Question 6",
@@ -82,7 +108,12 @@ const questions = [
     answers: [
       { text: "Deceptive pattern", correct: false },
       { text: "Not a deceptive pattern", correct: true },
-    ]
+    ],
+
+    paragpraph: "The past example was not a deceptive pattern. This pop-up prevents accidental actions and offers a clear 'Leave' button to undo the deletion. It helps users confirm their intentions without creating undue pressure.",
+    explanation: " ",
+    redesign: " ", 
+    nextButton: "Next Question",
   },
 
   {
@@ -93,7 +124,12 @@ const questions = [
     answers: [
       { text: "Deceptive pattern", correct: true },
       { text: "Not a deceptive pattern", correct: false },
-    ]
+    ],
+
+    paragpraph: "The past example was a deceptive pattern",
+    redesign: "images/Question7Redesign@2x.png",
+    explanation: "The company is making it significantly harder to cancel the users account and this pattern is called 'Roach Motel'. Usually, once the user calls them, they try to also pressure them to keep the account.",
+    nextButton: "Next Question",
   },
   {
     subheading: "Question 8",
@@ -103,7 +139,12 @@ const questions = [
     answers: [
       { text: "Deceptive pattern", correct: true },
       { text: "Not a deceptive pattern", correct: false },
-    ]
+    ],
+
+    paragpraph: "The past example was a deceptive pattern",
+    redesign: "images/Question8Redesign@2x.png",
+    explanation: "This is a nagging dark pattern. It uses repeated prompts to persistently nudge you towards an action (social media connection) that you might not necessarily want to take ",
+    nextButton: "Next Question",
   },
   {
     subheading: "Question 9",
@@ -113,7 +154,12 @@ const questions = [
     answers: [
       { text: "Deceptive pattern", correct: true },
       { text: "Not a deceptive pattern", correct: false },
-    ]
+    ],
+
+    paragpraph: "The past example was a deceptive pattern",
+    redesign: "images/Question9Redesign@2x.png",
+    explanation: " The in-app gem purchase is an 'Intermediate currency' deceptive pattern, designed to disconnect you from the real cost and potentially lead to overspending.",
+    nextButton: "Next Question",
   },
   {
     subheading: "Question 10",
@@ -123,95 +169,15 @@ const questions = [
     answers: [
       { text: "Deceptive pattern", correct: false },
       { text: "Not a deceptive pattern", correct: true },
-    ]
-  },
-];
+    ],
 
-const explanations = [
-  {
-    subheading: "Question 1",
-    paragpraph: "The past example was a deceptive pattern",
-    picture: "images/Question1@2x.png",
-    redesign: "images/Question1Redesign@2x.png",
-    explanation: "This is deceptive pattern type “Toying with emotions”, where the author includes any use of language, style, color,or other similar elements to evoke an emotion in order to persuade the user into a particular action.",
-    nextButton: "Next Question",
-  },
-  {
-    subheading: "Question 2",
-    paragpraph: "The past example was a not a deceptive pattern. Informing the user about the real number of items that is left, is actually good for the user.",
-    picture: "images/Question2@2x.png",
-    redesign:" ",
-    explanation: " ",
-    nextButton: "Next Question",
-  },
-  {
-    subheading: "Question 3",
-    paragpraph: "The past example was a deceptive pattern",
-    picture: "images/Question3@2x.png",
-    redesign: "images/Question3Redesign@2x.png",
-    explanation: "While Figma's team likely wants to ensure everyone experiences the benefits of their latest updates, requiring an update can disrupt your current or future workflow and they use 'Forced Action' deceptive pattern for that",
-    nextButton: "Next Question",
-  },
-  {
-    subheading: "Question 4",
-    paragpraph: "The past example was a deceptive pattern",
-    picture: "images/Question4@2x.png",
-    redesign: "images/Question4Redesign@2x.png",
-    explanation: "The e-shop's automatic addition of eco wrapping or insurance to your cart exemplifies either 'Presumed Consent' or 'Sneak into Basket' deceptive patterns, unfairly capitalizing on your potential eco-friendliness. ",
-    nextButton: "Next Question",
-  },
-  {
-    subheading: "Question 5",
-    paragpraph: "The past example was a deceptive pattern",
-    picture: "images/Question5@2x.png",
-    redesign: "images/Question5Redesign@2x.png",
-    explanation: " The lack of a reject button in a cookie consent banner is a 'Forced Action' deceptive pattern, limiting user choice and hindering informed consent.",
-    nextButton: "Next Question",
-  },
-  {
-    subheading: "Question 6",
-    paragpraph: "The past example was not a deceptive pattern. This pop-up prevents accidental actions and offers a clear 'Leave' button to undo the deletion. It helps users confirm their intentions without creating undue pressure.",
-    picture: "images/Question6@2x.png",
-    explanation: " ",
-    redesign: " ", 
-    nextButton: "Next Question",
-  },
-
-  {
-    subheading: "Question 7",
-    paragpraph: "The past example was a deceptive pattern",
-    picture: "images/Question7@2x.png",
-    redesign: "images/Question7Redesign@2x.png",
-    explanation: "The company is making it significantly harder to cancel the users account and this pattern is called 'Roach Motel'. Usually, once the user calls them, they try to also pressure them to keep the account.",
-    nextButton: "Next Question",
-  },
-  {
-    subheading: "Question 8",
-    paragpraph: "The past example was a deceptive pattern",
-    picture: "images/Question8@2x.png",
-    redesign: "images/Question8Redesign@2x.png",
-    explanation: "This is a nagging dark pattern. It uses repeated prompts to persistently nudge you towards an action (social media connection) that you might not necessarily want to take ",
-    nextButton: "Next Question",
-  },
-
-  {
-    subheading: "Question 9",
-    paragpraph: "The past example was a deceptive pattern",
-    picture: "images/Question9@2x.png",
-    redesign: "images/Question9Redesign@2x.png",
-    explanation: " The in-app gem purchase is an 'Intermediate currency' deceptive pattern, designed to disconnect you from the real cost and potentially lead to overspending.",
-    nextButton: "Next Question",
-  },
-  {
-    subheading: "Question 10",
     paragpraph: "The past example was not a deceptive pattern. While 'Releated to items you viewed' suggests personalization, it doesn't pressure the purchase or obscure the actual cost, making it a helpful suggestion rather than a deceptive pattern.",
-    picture: "images/Question10@2x.png",
     redesign: "", 
     explanation: " ",
     nextButton: "Finish",
   },
+];
 
-]
 
 let currentQuestion = 0;
 let score = 0;
@@ -268,25 +234,26 @@ function showQuestion() {
   button1Element.textContent = question.answers[0].text;
   button2Element.textContent = question.answers[1].text;
 
-  button1Element.addEventListener("click", handleButtonClick);
-  button2Element.addEventListener("click", handleButtonClick);
+  button1Element.addEventListener("click", (event) => handleButtonClick(event, question));
+  button2Element.addEventListener("click", (event) => handleButtonClick(event, question));
 
   isAnswerSubmitted = false; // Reset answer submitted flag
 }
 
 
-function handleButtonClick(event) {
+function handleButtonClick(event, question) {
   if (isAnswerSubmitted) return; // Prevent multiple submissions
 
   isAnswerSubmitted = true;
   const clickedButton = event.target;
   const isCorrect = clickedButton === button1Element ? questions[currentQuestion].answers[0].correct : questions[currentQuestion].answers[1].correct;
+  console.log(currentQuestion);
 
   if (isCorrect) {
     score++;
-    showExplanation(true);
+    showExplanation(true, question);
   } else {
-    showExplanation(false);
+    showExplanation(false, question);
   }
   currentQuestion++;
 }
@@ -301,15 +268,15 @@ startButton.addEventListener("click", () => {
 
 function showExplanation(correct) {
   questionContainerElement.style.display = "none"
-  const explanation = explanations[currentQuestion];
+  const question = questions[currentQuestion];
   explanationContainerElement.style.display = "flex";
-  explanationSubheadingElement.textContent = explanation.subheading;
+  explanationSubheadingElement.textContent = question.subheading;
   if (correct) {
     answerHeadingElement.textContent = "You are right!"
     answerHeadingElement.insertAdjacentHTML('afterbegin', '&nbsp;');
     answerHeadingElement.insertAdjacentHTML('afterbegin', '<i class="fa-regular fa-circle-check"></i>');
     answerHeadingElement.style.color = '#7CD676'
-    nextButtonExplanationElement.textContent = explanation.nextButton;
+    nextButtonExplanationElement.textContent = question.nextButton;
     nextButtonExplanationElement.addEventListener("click", () => showQuestion())
   }
   else {
@@ -319,23 +286,23 @@ function showExplanation(correct) {
     answerHeadingElement.style.color = '#D67676'
   }
 
-  nextButtonExplanationElement.textContent = explanation.nextButton;
+  nextButtonExplanationElement.textContent = question.nextButton;
   nextButtonExplanationElement.addEventListener("click", () => showQuestion())
 
-  answerParagraphElement.textContent = explanation.paragpraph;
-  answerPictureElement.src = explanation.picture;
-  if(explanation.redesign.trim()){
+  answerParagraphElement.textContent = question.paragpraph;
+  answerPictureElement.src = question.picture;
+  if(question.redesign.trim()){
     redesignLabelELement.style.display = "block"
     deceptivePatterLabelElement.style.display = "block"
-    redesignPictureElement.src = explanation.redesign;
+    redesignPictureElement.src = question.redesign;
   }else{
     deceptivePatterLabelElement.style.display = "none";
     redesignLabelELement.style.display = "none"
   }
-  if (!explanation.explanation.trim()) {
+  if (!question.explanation.trim()) {
     explanationCalloutElement.style.display = "none";
   } else {
-    explanationParagraphElement.textContent = explanation.explanation;
+    explanationParagraphElement.textContent = question.explanation;
     explanationCalloutElement.style.display = "inline";
   }
 }
