@@ -218,6 +218,14 @@ function shuffleArray(array) {
   }
 }
 
+function scrollToTop() {
+  window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth' // Optional: this enables smooth scrolling
+  });
+}
+
 function showQuestion() {
   explanationContainerElement.style.display = "none";
   leaderboardContainerElement.style.display = "none";
@@ -241,15 +249,16 @@ function showQuestion() {
   button1Element.textContent = question.answers[0].text;
   button2Element.textContent = question.answers[1].text;
 
-  button1Element.addEventListener("click", (event) => handleButtonClick(event, question));
-  button2Element.addEventListener("click", (event) => handleButtonClick(event, question));
+  button1Element.addEventListener("click", (event) => {handleButtonClick(event, question), scrollToTop()});
+  button2Element.addEventListener("click", (event) => {handleButtonClick(event, question), scrollToTop()});
 
-  isAnswerSubmitted = false; // Reset answer submitted flag
+  isAnswerSubmitted = false; 
 }
 
 
 function handleButtonClick(event, question) {
   if (isAnswerSubmitted) return; // Prevent multiple submissions
+  scrollToTop();
 
   isAnswerSubmitted = true;
   const clickedButton = event.target;
@@ -272,6 +281,7 @@ startButton.addEventListener("click", () => {
   shuffleArray(questions); // Shuffle the questions
   currentQuestion = 0;
   showQuestion();
+  scrollToTop();
 });
 
 function showExplanation(correct) {
@@ -285,7 +295,7 @@ function showExplanation(correct) {
     answerHeadingElement.insertAdjacentHTML('afterbegin', '<i class="fa-regular fa-circle-check"></i>');
     answerHeadingElement.style.color = '#7CD676'
     nextButtonExplanationElement.textContent = question.nextButton;
-    nextButtonExplanationElement.addEventListener("click", () => showQuestion())
+    nextButtonExplanationElement.addEventListener("click", () => {showQuestion(); scrollToTop()});
   }
   else {
     answerHeadingElement.textContent = "Oops that was not correct";
@@ -302,7 +312,7 @@ function showExplanation(correct) {
 
   }
 
-  nextButtonExplanationElement.addEventListener("click", () => showQuestion())
+  nextButtonExplanationElement.addEventListener("click", () => {showQuestion(); scrollToTop()})
 
   answerParagraphElement.textContent = question.paragpraph;
   answerPictureElement.src = question.picture;
@@ -365,6 +375,7 @@ function gameOver() {
     currentQuestion = 0;
     isAnswerSubmitted = false;
     leaderboardContainerElement.style.display = "none";
+    scrollToTop();
   });
 
   tryAgainButtonElement.addEventListener("click", () => {
@@ -374,6 +385,7 @@ function gameOver() {
     leaderboardContainerElement.style.display = "none";
     landingPageContainer.style.display = "flex";
     footer.style.display = "none";
+    scrollToTop();
 
   });
   footer.style.display = "block";
