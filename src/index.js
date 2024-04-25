@@ -173,6 +173,7 @@ const explanations = [
     paragpraph: "The past example was not a deceptive pattern. This pop-up prevents accidental actions and offers a clear 'Leave' button to undo the deletion. It helps users confirm their intentions without creating undue pressure.",
     picture: "images/Question6@2x.png",
     explanation: " ",
+    redesign: " ", 
     nextButton: "Next Question",
   },
 
@@ -205,6 +206,7 @@ const explanations = [
     subheading: "Question 10",
     paragpraph: "The past example was not a deceptive pattern. While 'Releated to items you viewed' suggests personalization, it doesn't pressure the purchase or obscure the actual cost, making it a helpful suggestion rather than a deceptive pattern.",
     picture: "images/Question10@2x.png",
+    redesign: "", 
     explanation: " ",
     nextButton: "Finish",
   },
@@ -234,6 +236,7 @@ const answerParagraphElement = document.getElementById("answerParagraph");
 const answerPictureElement = document.getElementById("answerPicture");
 const redesignPictureElement = document.getElementById("redesignPicture");
 const redesignLabelELement = document.getElementById("redesignLabel");
+const deceptivePatterLabelElement = document.getElementById("headingImage");
 const explanationParagraphElement = document.getElementById("explanationParagraph")
 const nextButtonExplanationElement = document.getElementById("nextQuestionExplanationButton");
 const explanationCalloutElement = document.getElementById("explanationCallout")
@@ -323,8 +326,10 @@ function showExplanation(correct) {
   answerPictureElement.src = explanation.picture;
   if(explanation.redesign.trim()){
     redesignLabelELement.style.display = "block"
+    deceptivePatterLabelElement.style.display = "block"
     redesignPictureElement.src = explanation.redesign;
   }else{
+    deceptivePatterLabelElement.style.display = "none";
     redesignLabelELement.style.display = "none"
   }
   if (!explanation.explanation.trim()) {
