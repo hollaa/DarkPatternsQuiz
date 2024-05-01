@@ -6,18 +6,18 @@ import './main.scss'
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDLkrpnxA4csgewSD58dxBCwQLqXOKrfa8",
-  authDomain: "darkquiz-5191e.firebaseapp.com",
-  projectId: "darkquiz-5191e",
-  storageBucket: "darkquiz-5191e.appspot.com",
-  messagingSenderId: "886246945015",
-  appId: "1:886246945015:web:ccec7aacce9b608212a3f2"
+  apiKey: "AIzaSyCTnEHJfQSfLl-jUgr3kLx4jXHuYtHpjVY",
+  authDomain: "deceptivepatternsquiz.firebaseapp.com",
+  projectId: "deceptivepatternsquiz",
+  storageBucket: "deceptivepatternsquiz.appspot.com",
+  messagingSenderId: "216538593876",
+  appId: "1:216538593876:web:4f69628f6a22552defcbc1"
 };
 
 initializeApp(firebaseConfig);
 
 const db = getFirestore();
-const colRef = collection(db, 'usernames');
+const colRef = collection(db, 'username');
 
 //queries
 const q = query(colRef, orderBy('score', 'desc'))
@@ -37,12 +37,12 @@ const questions = [
     paragpraph: "The past example was a deceptive pattern",
     redesign: "images/Question1Redesign@2x.png",
     explanation: "This is deceptive pattern type “Toying with emotions”, where the author includes any use of language, style, color,or other similar elements to evoke an emotion in order to persuade the user into a particular action.",
-    nextButton: "Next Question",
+    nextButton: "Next question",
   },
   {
     subheading: "Question 2",
     heading: "Do you consider this as a deceptive pattern?",
-    scenario: "Scenario: You want to buy a new limited edition of poster and the web informs you about the number of items left.  ",
+    scenario: "Scenario: You want to buy a new limited edition of poster and the web informs you about the real number of items left.  ",
     picture: "images/Question2@2x.png",
     answers: [
       { text: "Deceptive pattern", correct: false },
@@ -52,7 +52,7 @@ const questions = [
     paragpraph: "The past example was a not a deceptive pattern. Informing the user about the real number of items that is left, is actually good for the user.",
     redesign:" ",
     explanation: " ",
-    nextButton: "Next Question",
+    nextButton: "Next question",
   },
   {
     subheading: "Question 3",
@@ -67,7 +67,7 @@ const questions = [
     paragpraph: "The past example was a deceptive pattern",
     redesign: "images/Question3Redesign@2x.png",
     explanation: "While Figma's team likely wants to ensure everyone experiences the benefits of their latest updates, requiring an update can disrupt your current or future workflow and they use 'Forced Action' deceptive pattern for that",
-    nextButton: "Next Question",
+    nextButton: "Next question",
   },
   {
     subheading: "Question 4",
@@ -83,7 +83,7 @@ const questions = [
     paragpraph: "The past example was a deceptive pattern",
     redesign: "images/Question4Redesign@2x.png",
     explanation: "The e-shop's automatic addition of eco wrapping or insurance to your cart exemplifies either 'Presumed Consent' or 'Sneak into Basket' deceptive patterns, unfairly capitalizing on your potential eco-friendliness. ",
-    nextButton: "Next Question",
+    nextButton: "Next question",
   },
   {
     subheading: "Question 5",
@@ -98,7 +98,7 @@ const questions = [
     paragpraph: "The past example was a deceptive pattern",
     redesign: "images/Question5Redesign@2x.png",
     explanation: " The lack of a reject button in a cookie consent banner is a 'Forced Action' deceptive pattern, limiting user choice and hindering informed consent.",
-    nextButton: "Next Question",
+    nextButton: "Next question",
   },
   {
     subheading: "Question 6",
@@ -113,7 +113,7 @@ const questions = [
     paragpraph: "The past example was not a deceptive pattern. This pop-up prevents accidental actions and offers a clear 'Leave' button to undo the deletion. It helps users confirm their intentions without creating undue pressure.",
     explanation: " ",
     redesign: " ", 
-    nextButton: "Next Question",
+    nextButton: "Next question",
   },
 
   {
@@ -129,7 +129,7 @@ const questions = [
     paragpraph: "The past example was a deceptive pattern",
     redesign: "images/Question7Redesign@2x.png",
     explanation: "The company is making it significantly harder to cancel the users account and this pattern is called 'Roach Motel'. Usually, once the user calls them, they try to also pressure them to keep the account.",
-    nextButton: "Next Question",
+    nextButton: "Next question",
   },
   {
     subheading: "Question 8",
@@ -144,7 +144,7 @@ const questions = [
     paragpraph: "The past example was a deceptive pattern",
     redesign: "images/Question8Redesign@2x.png",
     explanation: "This is a nagging dark pattern. It uses repeated prompts to persistently nudge you towards an action (social media connection) that you might not necessarily want to take ",
-    nextButton: "Next Question",
+    nextButton: "Next question",
   },
   {
     subheading: "Question 9",
@@ -159,7 +159,7 @@ const questions = [
     paragpraph: "The past example was a deceptive pattern",
     redesign: "images/Question9Redesign@2x.png",
     explanation: " The in-app gem purchase is an 'Intermediate currency' deceptive pattern, designed to disconnect you from the real cost and potentially lead to overspending.",
-    nextButton: "Next Question",
+    nextButton: "Next question",
   },
   {
     subheading: "Question 10",
@@ -308,7 +308,7 @@ function showExplanation(correct) {
     nextButtonExplanationElement.textContent = "Finish"
   }
   else{
-    nextButtonExplanationElement.textContent = "Next Question"
+    nextButtonExplanationElement.textContent = "Next question"
 
   }
 
@@ -394,13 +394,37 @@ function gameOver() {
 
 
 const addUsername = document.querySelector('.add');
+let isAdding = false; // Flag to track submission state
+
 addUsername.addEventListener('submit', (e) => {
-  e.preventDefault()
+  e.preventDefault();  // Prevent default form submission
+
+  // Get the username value and trim any leading/trailing whitespace
+  const username = addUsername.username.value.trim();
+
+  // Check if username is empty
+  if (!username) {
+    // Optional: Display an error message
+    alert('Please enter a username!');
+    return;  // Exit the function if username is empty
+  }
+
+  // Prevent multiple submissions
+  if (isAdding) {
+    return;  // Exit the function if already adding
+  }
+
+  isAdding = true; // Set flag to true to indicate adding in progress
+
   addDoc(colRef, {
-    username: addUsername.username.value,
-    score: score // Assuming you have a way to get the score value
+    username,  // Use the trimmed username value
+    score,
   })
     .then(() => {
       addUsername.reset();
+      isAdding = false; // Reset flag after successful addition
     })
-})
+    .catch(() => {
+      isAdding = false; // Reset flag even on error
+    });
+});

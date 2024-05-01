@@ -130,8 +130,8 @@ body {
 
 .explanationImages{
   display: flex;
-  flex-direction: row;
-  column-gap: 16px;
+  flex-direction: column;
+  row-gap: 12px;
 }
 
 
